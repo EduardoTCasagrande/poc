@@ -1,0 +1,377 @@
+_______________________________________________________________
+         __          _______   _____
+         \ \        / /  __ \ / ____|
+          \ \  /\  / /| |__) | (___   ___  __ _ _ __ ®
+           \ \/  \/ / |  ___/ \___ \ / __|/ _` | '_ \
+            \  /\  /  | |     ____) | (__| (_| | | | |
+             \/  \/   |_|    |_____/ \___|\__,_|_| |_|
+
+         WordPress Security Scanner by the WPScan Team
+                         Version 3.8.25
+       Sponsored by Automattic - https://automattic.com/
+       @_WPScan_, @ethicalhack3r, @erwan_lr, @firefart
+_______________________________________________________________
+
+[34m[i][0m It seems like you have not updated the database for some time.
+[?] Do you want to update now? [Y]es [N]o, default: [N][32m[+][0m URL: https://princesareborn.actmobmarketingdigital.com.br/ [2a02:4780:13:897:0:15f6:d4cc:1]
+[32m[+][0m Started: Sun Mar  9 18:55:30 2025
+
+Interesting Finding(s):
+
+[32m[+][0m Headers
+ | Interesting Entries:
+ |  - x-powered-by: PHP/8.2.27
+ |  - server: LiteSpeed
+ |  - platform: hostinger
+ |  - panel: hpanel
+ |  - content-security-policy: upgrade-insecure-requests
+ |  - alt-svc: h3=":443"; ma=2592000, h3-29=":443"; ma=2592000, h3-Q050=":443"; ma=2592000, h3-Q046=":443"; ma=2592000, h3-Q043=":443"; ma=2592000, quic=":443"; ma=2592000; v="43,46"
+ | Found By: Headers (Passive Detection)
+ | Confidence: 100%
+
+[32m[+][0m robots.txt found: https://princesareborn.actmobmarketingdigital.com.br/robots.txt
+ | Interesting Entries:
+ |  - /wp-content/uploads/wc-logs/
+ |  - /wp-content/uploads/woocommerce_transient_files/
+ |  - /wp-content/uploads/woocommerce_uploads/
+ |  - /wp-admin/
+ |  - /wp-admin/admin-ajax.php
+ | Found By: Robots Txt (Aggressive Detection)
+ | Confidence: 100%
+
+[32m[+][0m XML-RPC seems to be enabled: https://princesareborn.actmobmarketingdigital.com.br/xmlrpc.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+ | References:
+ |  - http://codex.wordpress.org/XML-RPC_Pingback_API
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_ghost_scanner/
+ |  - https://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_xmlrpc_dos/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_xmlrpc_login/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_pingback_access/
+
+[32m[+][0m WordPress readme found: https://princesareborn.actmobmarketingdigital.com.br/readme.html
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[32m[+][0m The external WP-Cron seems to be enabled: https://princesareborn.actmobmarketingdigital.com.br/wp-cron.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 60%
+ | References:
+ |  - https://www.iplocation.net/defend-wordpress-from-ddos
+ |  - https://github.com/wpscanteam/wpscan/issues/1299
+
+
+Fingerprinting the version -: |============================================================================================================================|
+[34m[i][0m The WordPress version could not be detected.
+
+[32m[+][0m WordPress theme in use: tema-princesareborn-by-actmob
+ | Location: https://princesareborn.actmobmarketingdigital.com.br/wp-content/themes/tema-princesareborn-by-actmob/
+ | Style URL: https://princesareborn.actmobmarketingdigital.com.br/wp-content/themes/tema-princesareborn-by-actmob/style.css?ver=all
+ | Style Name: Princesa Reborn - by Actmob
+ | Description: Tema desenvolvido exclusivamente pela Actmob para seu site....
+ | Author: Jean Andrade
+ | Author URI: https://actmob.com/
+ |
+ | Found By: Css Style In Homepage (Passive Detection)
+ | Confirmed By: Css Style In 404 Page (Passive Detection)
+ |
+ | Version: 1.1.1 (80% confidence)
+ | Found By: Style (Passive Detection)
+ |  - https://princesareborn.actmobmarketingdigital.com.br/wp-content/themes/tema-princesareborn-by-actmob/style.css?ver=all, Match: 'Version: 1.1.1'
+
+[32m[+][0m Enumerating All Plugins (via Passive Methods)
+[32m[+][0m Checking Plugin Versions (via Passive and Aggressive Methods)
+
+[34m[i][0m Plugin(s) Identified:
+
+[32m[+][0m ajax-search-for-woocommerce
+ | Location: https://princesareborn.actmobmarketingdigital.com.br/wp-content/plugins/ajax-search-for-woocommerce/
+ | Latest Version: 1.30.0 (up to date)
+ | Last Updated: 2025-01-27T11:39:00.000Z
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ | Confirmed By: Urls In 404 Page (Passive Detection)
+ |
+ | Version: 1.30.0 (100% confidence)
+ | Found By: Readme - Stable Tag (Aggressive Detection)
+ |  - https://princesareborn.actmobmarketingdigital.com.br/wp-content/plugins/ajax-search-for-woocommerce/readme.txt
+ | Confirmed By: Readme - ChangeLog Section (Aggressive Detection)
+ |  - https://princesareborn.actmobmarketingdigital.com.br/wp-content/plugins/ajax-search-for-woocommerce/readme.txt
+
+[32m[+][0m cf7-sweet-alert-popup
+ | Location: https://princesareborn.actmobmarketingdigital.com.br/wp-content/plugins/cf7-sweet-alert-popup/
+ | Last Updated: 2023-09-13T13:04:00.000Z
+ | [33m[!][0m The version is out of date, the latest version is 1.6.5
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ | Confirmed By: Urls In 404 Page (Passive Detection)
+ |
+ | Version: 1.0 (80% confidence)
+ | Found By: Readme - Stable Tag (Aggressive Detection)
+ |  - https://princesareborn.actmobmarketingdigital.com.br/wp-content/plugins/cf7-sweet-alert-popup/readme.txt
+
+[32m[+][0m contact-form-7
+ | Location: https://princesareborn.actmobmarketingdigital.com.br/wp-content/plugins/contact-form-7/
+ | Latest Version: 6.0.4 (up to date)
+ | Last Updated: 2025-02-18T06:51:00.000Z
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ | Confirmed By:
+ |  Urls In 404 Page (Passive Detection)
+ |  Hidden Input (Passive Detection)
+ |
+ | Version: 6.0.4 (100% confidence)
+ | Found By: Query Parameter (Passive Detection)
+ |  - https://princesareborn.actmobmarketingdigital.com.br/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=6.0.4
+ | Confirmed By:
+ |  Hidden Input (Passive Detection)
+ |   - https://princesareborn.actmobmarketingdigital.com.br/, Match: '6.0.4'
+ |  Readme - Stable Tag (Aggressive Detection)
+ |   - https://princesareborn.actmobmarketingdigital.com.br/wp-content/plugins/contact-form-7/readme.txt
+
+[32m[+][0m js_composer
+ | Location: https://princesareborn.actmobmarketingdigital.com.br/wp-content/plugins/js_composer/
+ | Last Updated: 2025-02-04T20:20:30.000Z
+ | [33m[!][0m The version is out of date, the latest version is 8.2
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ | Confirmed By:
+ |  Urls In 404 Page (Passive Detection)
+ |  Body Tag (Passive Detection)
+ |
+ | [31m[!][0m 7 vulnerabilities identified:
+ |
+ | [31m[!][0m Title: WPBakery Visual Composer < 7.6 - Authenticated (Contributor+) Stored Cross-Site Scripting via Post Title tag attribute
+ |     Fixed in: 7.6
+ |     References:
+ |      - https://wpscan.com/vulnerability/787a71f8-1179-4442-9441-87fbe83a7e67
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1841
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/34d21418-4faf-40bf-a960-79482a592722
+ |
+ | [31m[!][0m Title: WPBakery Visual Composer < 7.6 - Authenticated (Contributor+) Stored Cross-Site Scripting via Custom Heading tag attribute
+ |     Fixed in: 7.6
+ |     References:
+ |      - https://wpscan.com/vulnerability/8ebfad34-7b46-4783-9fad-c96ab4f4c737
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1842
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/674e6722-d293-4572-80bf-984e74c3e33f
+ |
+ | [31m[!][0m Title: WPBakery Visual Composer < 7.6 - Authenticated (Contributor+) Stored Cross-Site Scripting via Button onclick attribute
+ |     Fixed in: 7.6
+ |     References:
+ |      - https://wpscan.com/vulnerability/b87926cd-0fe0-49df-8c61-9df1363a67a8
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1805
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/7a571386-fae1-4a56-8567-9d3e23249de1
+ |
+ | [31m[!][0m Title: WPBakery Visual Composer < 7.6 - Authenticated (Contributor+) Stored Cross-Site Scripting via Post Author
+ |     Fixed in: 7.6
+ |     References:
+ |      - https://wpscan.com/vulnerability/b41c2343-3be4-4bd9-ae5d-69ae96ba23ae
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1840
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/cb8ecbbc-ada9-4887-92e6-25a587ecfb84
+ |
+ | [31m[!][0m Title: WPBakery Page Builder < 7.7 - Authenticated (Contributor+) Stored Cross-Site Scripting via VC Single Image link attribute
+ |     Fixed in: 7.7
+ |     References:
+ |      - https://wpscan.com/vulnerability/3b067a13-ee58-44c9-80af-ae04af6256c8
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-5265
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/35a5114e-5c5f-4003-8bb3-77243ffbac1a
+ |
+ | [31m[!][0m Title: WPBakery < 7.8 - Authenticated (Author+) Stored Cross-Site Scripting
+ |     Fixed in: 7.8
+ |     References:
+ |      - https://wpscan.com/vulnerability/992e5d47-e290-420a-adf8-f552a929e51d
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-5708
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/23ff12f0-eb9d-4bb3-8db0-0e794c0f0594
+ |
+ | [31m[!][0m Title: WPBakery < 7.8 - Authenticated (Author+) Local File Inclusion
+ |     Fixed in: 7.8
+ |     References:
+ |      - https://wpscan.com/vulnerability/6e3e1944-67f7-405e-ae4f-f0ab8c6c9acd
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-5709
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/7fad30c8-fd8a-4cf2-a3aa-16a374231b87
+ |
+ | Version: 7.5 (80% confidence)
+ | Found By: Body Tag (Passive Detection)
+ |  - https://princesareborn.actmobmarketingdigital.com.br/, Match: 'js-comp-ver-7.5'
+ | Confirmed By: Query Parameter (Passive Detection)
+ |  - https://princesareborn.actmobmarketingdigital.com.br/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=7.5
+ |  - https://princesareborn.actmobmarketingdigital.com.br/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=7.5
+
+[32m[+][0m melhor-envio-cotacao
+ | Location: https://princesareborn.actmobmarketingdigital.com.br/wp-content/plugins/melhor-envio-cotacao/
+ | Latest Version: 2.15.9 (up to date)
+ | Last Updated: 2024-11-06T13:58:00.000Z
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ | Confirmed By: Urls In 404 Page (Passive Detection)
+ |
+ | Version: 2.15.9 (100% confidence)
+ | Found By: Readme - Stable Tag (Aggressive Detection)
+ |  - https://princesareborn.actmobmarketingdigital.com.br/wp-content/plugins/melhor-envio-cotacao/readme.md
+ | Confirmed By: Readme - ChangeLog Section (Aggressive Detection)
+ |  - https://princesareborn.actmobmarketingdigital.com.br/wp-content/plugins/melhor-envio-cotacao/readme.md
+
+[32m[+][0m revslider
+ | Location: https://princesareborn.actmobmarketingdigital.com.br/wp-content/plugins/revslider/
+ | Last Updated: 2025-02-19T04:05:08.000Z
+ | [33m[!][0m The version is out of date, the latest version is 6.7.29
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ | Confirmed By:
+ |  Urls In 404 Page (Passive Detection)
+ |  Meta Generator (Passive Detection)
+ |
+ | [31m[!][0m 12 vulnerabilities identified:
+ |
+ | [31m[!][0m Title: Revolution Slider <= 6.6.12 - Author+ Remote Code Execution
+ |     Fixed in: 6.6.13
+ |     References:
+ |      - https://wpscan.com/vulnerability/a8350890-e6d4-4b04-a158-2b0ee3748e65
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-2359
+ |
+ | [31m[!][0m Title: Slider Revolution < 6.6.15 - Authenticated (Contributor+) Stored Cross-Site Scripting
+ |     Fixed in: 6.6.15
+ |     References:
+ |      - https://wpscan.com/vulnerability/3cde24f3-aaad-4eb3-b6ba-a518afe66fbe
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-47772
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/772e843b-00ea-45f5-b730-c9a793d4c2db
+ |
+ | [31m[!][0m Title: Slider Revolution < 6.6.16 - Authenticated (Author+) Arbitrary File Upload
+ |     Fixed in: 6.6.16
+ |     References:
+ |      - https://wpscan.com/vulnerability/1b841a64-fb0a-434f-b7b4-0777f0480c87
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-47784
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/e2d29afd-06e8-461a-918f-38228441a51a
+ |
+ | [31m[!][0m Title: Slider Revolution < 6.6.19 - Author+ Insecure Deserialization leading to RCE
+ |     Fixed in: 6.6.19
+ |     References:
+ |      - https://wpscan.com/vulnerability/36ced447-84ea-4162-80d2-6df226cb53cb
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6528
+ |
+ | [31m[!][0m Title: Revslider < 6.7.0 - Authenticated (Author+) Stored Cross-Site Scripting
+ |     Fixed in: 6.7.0
+ |     References:
+ |      - https://wpscan.com/vulnerability/8238962e-feca-4a45-b335-3c92e668c889
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2306
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/f6af1e90-9bad-470b-9e00-137000c0450c
+ |
+ | [31m[!][0m Title: Slider Revolution < 6.7.8 - Authenticated (Author+) Stored Cross-Site Scripting via htmltag Parameter
+ |     Fixed in: 6.7.8
+ |     References:
+ |      - https://wpscan.com/vulnerability/50dd9668-c263-4bfd-8a94-00a3ad9f656d
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-4092
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/8437abcc-3e34-4a8a-bfe2-2ff7c9f41164
+ |
+ | [31m[!][0m Title: Slider Revolution < 6.7.11 - Authenticated (Author+) Stored Cross-Site Scripting via Add Layer class, id, and title Attributes
+ |     Fixed in: 6.7.11
+ |     References:
+ |      - https://wpscan.com/vulnerability/4a436977-1295-40e8-9957-bda1b0a3e6d6
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-4581
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/a99b8eb9-1511-4ec0-98f4-c0e0c989fa28
+ |
+ | [31m[!][0m Title: Slider Revolution < 6.7.11 - Authenticated (Contributor+) Stored Cross-Site Scripting via Elementor wrapperid and zindex
+ |     Fixed in: 6.7.11
+ |     References:
+ |      - https://wpscan.com/vulnerability/32b1ee26-525a-4b1e-bdf0-881f0d161788
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-4637
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/457b5066-da37-4877-9abe-c912bc201f29
+ |
+ | [31m[!][0m Title: Slider Revolution < 6.7.0 - Missing Authorization
+ |     Fixed in: 6.7.0
+ |     References:
+ |      - https://wpscan.com/vulnerability/f893fd2d-d040-408a-a800-99bf02e32230
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34444
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/14feb451-2ece-467b-abf0-7abac26e40c1
+ |
+ | [31m[!][0m Title: Slider Revolution < 6.7.11 - Authenticated (Author+) Stored Cross-Site Scripting
+ |     Fixed in: 6.7.11
+ |     References:
+ |      - https://wpscan.com/vulnerability/f79b835f-a3a2-40e1-91cc-987604b0a593
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34443
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/64852bc8-aeba-458d-9235-94bd4c4ec429
+ |
+ | [31m[!][0m Title: Slider Revolution < 6.7.14 - Authenticated (Administrator+) Stored Cross-Site Scripting
+ |     Fixed in: 6.7.14
+ |     References:
+ |      - https://wpscan.com/vulnerability/6d7c04cb-b3c1-4003-866b-a3301929e2aa
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-37449
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/8a8fc6a5-a28a-4d6b-8d63-c5e2f4d26422
+ |
+ | [31m[!][0m Title: Slider Revolution < 6.7.19 - Authenticated (Author+) Stored Cross-Site Scripting via SVG File Upload
+ |     Fixed in: 6.7.19
+ |     References:
+ |      - https://wpscan.com/vulnerability/278e6259-cb64-4cc1-91c6-2cf2178dd1d0
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-8107
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/22b59b36-ba47-4c10-8f43-a29ae3b9d446
+ |
+ | Version: 6.5.11 (100% confidence)
+ | Found By: Meta Generator (Passive Detection)
+ |  - https://princesareborn.actmobmarketingdigital.com.br/, Match: 'Powered by Slider Revolution 6.5.11'
+ | Confirmed By: Release Log (Aggressive Detection)
+ |  - https://princesareborn.actmobmarketingdigital.com.br/wp-content/plugins/revslider/release_log.html, Match: 'Version 6.5.11 (18th November 2021)'
+
+[32m[+][0m webp-express
+ | Location: https://princesareborn.actmobmarketingdigital.com.br/wp-content/plugins/webp-express/
+ | Latest Version: 0.25.9 (up to date)
+ | Last Updated: 2024-04-07T05:55:00.000Z
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ | Confirmed By: Urls In 404 Page (Passive Detection)
+ |
+ | Version: 0.25.9 (100% confidence)
+ | Found By: Readme - Stable Tag (Aggressive Detection)
+ |  - https://princesareborn.actmobmarketingdigital.com.br/wp-content/plugins/webp-express/README.txt
+ | Confirmed By: Readme - ChangeLog Section (Aggressive Detection)
+ |  - https://princesareborn.actmobmarketingdigital.com.br/wp-content/plugins/webp-express/README.txt
+
+[32m[+][0m woocommerce
+ | Location: https://princesareborn.actmobmarketingdigital.com.br/wp-content/plugins/woocommerce/
+ | Latest Version: 9.7.1 (up to date)
+ | Last Updated: 2025-03-04T15:28:00.000Z
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ | Confirmed By:
+ |  Urls In 404 Page (Passive Detection)
+ |  Meta Generator (Passive Detection)
+ |
+ | Version: 9.7.1 (100% confidence)
+ | Found By: Query Parameter (Passive Detection)
+ |  - https://princesareborn.actmobmarketingdigital.com.br/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=9.7.1
+ |  - https://princesareborn.actmobmarketingdigital.com.br/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=9.7.1
+ |  - https://princesareborn.actmobmarketingdigital.com.br/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=9.7.1
+ |  - https://princesareborn.actmobmarketingdigital.com.br/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=9.7.1
+ |  - https://princesareborn.actmobmarketingdigital.com.br/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=9.7.1
+ | Confirmed By: Meta Generator (Passive Detection)
+ |  - https://princesareborn.actmobmarketingdigital.com.br/, Match: 'WooCommerce 9.7.1'
+
+[32m[+][0m yith-woocommerce-wishlist
+ | Location: https://princesareborn.actmobmarketingdigital.com.br/wp-content/plugins/yith-woocommerce-wishlist/
+ | Latest Version: 4.3.0 (up to date)
+ | Last Updated: 2025-02-20T13:42:00.000Z
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ | Confirmed By: Urls In 404 Page (Passive Detection)
+ |
+ | Version: 4.3.0 (60% confidence)
+ | Found By: Translation File (Aggressive Detection)
+ |  - https://princesareborn.actmobmarketingdigital.com.br/wp-content/plugins/yith-woocommerce-wishlist/languages/yith-woocommerce-wishlist.pot, Match: 't-Id-Version: YITH WooCommerce Wishlist 4.3.0'
+
+[32m[+][0m Enumerating Config Backups (via Passive and Aggressive Methods)
+
+ Checking Config Backups -: |==============================================================================================================================|
+
+[34m[i][0m No Config Backups Found.
+
+[32m[+][0m WPScan DB API OK
+ | Plan: free
+ | Requests Done (during the scan): 9
+ | Requests Remaining: 5
+
+[32m[+][0m Finished: Sun Mar  9 18:56:01 2025
+[32m[+][0m Requests Done: 858
+[32m[+][0m Cached Requests: 634
+[32m[+][0m Data Sent: 281.695 KB
+[32m[+][0m Data Received: 859.127 KB
+[32m[+][0m Memory used: 302.621 MB
+[32m[+][0m Elapsed time: 00:00:30
